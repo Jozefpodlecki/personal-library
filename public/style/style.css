@@ -1,0 +1,122 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  height: 100%; }
+
+body, .root {
+  height: inherit;
+  margin: 0; }
+
+body {
+  background: #0052D4;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #6FB1FC, #4364F7, #0052D4);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #6FB1FC, #4364F7, #0052D4);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
+  font-family: 'Gelasio', sans-serif; }
+
+input {
+  display: block; }
+
+#books {
+  padding: 10px;
+  width: 400px;
+  border: 1px solid black; }
+
+#book {
+  padding: 10px;
+  width: 400px;
+  border: 1px solid black; }
+
+.toolTip {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  padding: 10px;
+  background: black;
+  color: white;
+  font-size: 20px;
+  transition: all 0.5s ease-in; }
+  .toolTip--active {
+    display: block;
+    opacity: 1; }
+
+.book-list-item {
+  cursor: pointer;
+  list-style-type: none; }
+
+.form > * {
+  margin: 10px 0; }
+
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; }
+
+.header {
+  padding: 10px 0px;
+  margin: 10px 0px; }
+
+.headline {
+  text-align: center; }
+
+.container {
+  flex: 1 1 auto; }
+
+.social {
+  text-align: center; }
+
+.icon {
+  margin: 10px; }
+
+footer {
+  flex: 0 0 150px;
+  background: black;
+  font-family: 'Oswald', sans-serif;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.item {
+  padding-left: 30px; }
+
+.httpMethod {
+  padding: 7px;
+  margin: 5px;
+  border-radius: 10px; }
+  .httpMethod--get {
+    background: green; }
+  .httpMethod--post {
+    background: red; }
+
+.httpUrl {
+  padding: 10px;
+  margin: 5px;
+  background: rgba(0, 0, 0, 0.5); }
+
+.field {
+  padding: 10px;
+  border-radius: 20px;
+  border: none; }
+
+.submitButton {
+  margin: 20px 10px 10px 10px;
+  border-radius: 15px;
+  padding: 10px;
+  color: white;
+  border: 3px solid white;
+  font-weight: bold;
+  background: transparent;
+  transition: all 0.4s ease-in; }
+  .submitButton:hover {
+    opacity: 0.5;
+    cursor: pointer; }
+
+.endpoint {
+  margin-bottom: 20px; }
