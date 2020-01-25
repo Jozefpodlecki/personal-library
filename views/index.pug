@@ -1,0 +1,65 @@
+extends layout.pug
+    
+block body
+  .container
+    .toolTip
+    h1.headline Information Security and Quality Assurance Projects - #{title}
+    
+    .item
+      h3 Usage
+      div
+        .header
+          span.httpMethod.httpMethod--get GET
+          span.httpUrl #{url}api/books
+        #books
+      div
+        .header
+          span.httpMethod.httpMethod--get GET
+          span.httpUrl #{url}api/books/:id
+        form.form
+          input.field(required, type="text", name="id", placeholder="id of book")
+          input.submitButton(type="submit" value="Get book")
+        #book
+      div
+        .header
+          span.httpMethod.httpMethod--post POST
+          span.httpUrl #{url}api/books
+        form.form
+          input.field(required, type="text", name="title", placeholder="title")
+          input.submitButton(type="submit" value="Add Book")
+      div
+        .header
+          span.httpMethod.httpMethod--post POST
+          span.httpUrl #{url}api/books/:id
+        form.form
+          input.field(required, type="text", name="id", placeholder="id of book")
+          input.field(required, type="text", name="comment", placeholder="comment")
+          input.submitButton(type="submit" value="Add Comment")
+      div
+        .header
+          span.httpMethod.httpMethod--post DELETE
+          span.httpUrl #{url}api/books/:id
+        form.form
+          input.field(required, type="text", name="id", placeholder="id of books")
+          input.submitButton(type="submit" value="Delete Book")
+      div
+        .header
+          span.httpMethod.httpMethod--post DELETE
+          span.httpUrl #{url}api/books
+        form.form
+          input.submitButton(type="submit" value="Delete Book")
+        
+      
+    .item
+      h3 User Story
+      ol
+        li Nothing from my website will be cached in my client.
+        li The headers will say that the site is powered by 'PHP 4.2.0' even though it isn't (as a security measure).
+        li I can post a title to /api/books to add a book and returned will be the object with the title and a unique _id.
+        li I can get /api/books to retrieve an array of all books containing title, _id, and commentcount.
+        li I can get /api/books/{id} to retrieve a single object of a book containing _title, _id, & an array of comments (empty array if no comments present).
+        li I can post a comment to /api/books/{id} to add a comment to a book and returned will be the books object similar to get /api/books/{id} including the new comment.
+        li I can delete /api/books/{_id} to delete a book from the collection. Returned will be 'delete successful' if successful.
+        li If I try to request a book that doesn't exist I will be returned 'no book exists'.
+        li I can send a delete request to /api/books to delete all books in the database. Returned will be 'complete delete successful' if successful.
+        li All 6 functional tests required are complete and passing.
